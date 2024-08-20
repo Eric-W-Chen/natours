@@ -1,0 +1,42 @@
+@use "../abstracts/" as var;
+
+.u-container {
+  max-width: var.$grid-width !important;
+  margin: 0 auto !important;
+
+  @include var.respond(tab-port) {
+    max-width: 50rem !important;
+  }
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include var.respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include var.respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important;
+}
+
+.u-column-gap-huge {
+  column-gap: 25rem !important;
+}

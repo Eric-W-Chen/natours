@@ -1,0 +1,103 @@
+@use "../abstracts/" as var;
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+
+    font-size: var.$default-font-size;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(var.$color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(var.$color-black, 0.2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &--white {
+    background-color: var.$color-white;
+    color: var.$color-grey-dark;
+
+    &::after {
+      background-color: var.$color-white;
+    }
+  }
+
+  &--green {
+    background-color: var.$color-primary;
+    color: var.$color-white;
+
+    &::after {
+      background-color: var.$color-primary;
+    }
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: var.$default-font-size;
+
+    text-decoration: none;
+    color: var.$color-primary;
+    border: 0.1rem solid var.$color-primary;
+    padding: 0.3rem;
+
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: var.$color-primary;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(var.$color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(var.$color-black, 0.15);
+    transform: translateY(0);
+  }
+}

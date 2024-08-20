@@ -1,0 +1,43 @@
+@use "../abstracts/" as var;
+
+.grid {
+  display: grid;
+  row-gap: var.$row-gap;
+  column-gap: var.$column-gap;
+}
+
+.grid--x-center {
+  justify-items: center;
+}
+
+.grid--y-center {
+  align-items: center;
+}
+
+.grid--1-col {
+  grid-template-columns: 1fr;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+
+  @include var.respond(tab-port) {
+    @include var.grid--1-col();
+  }
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include var.respond(tab-port) {
+    @include var.grid--1-col();
+  }
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include var.respond(tab-port) {
+    @include var.grid--1-col();
+  }
+}

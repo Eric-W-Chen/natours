@@ -1,0 +1,50 @@
+@use "variables" as var;
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media Query Manager:
+0 - 600px:     Phone
+601px - 900px:    Portrait Tablet
+901px - 1200px:   Landscape Tablet
+1201px - 1800px:  Base Style (Desktop)
+1800px+:          Large Screens 
+
+Arguments: phone, tab-port, tab-land, desk-large  */
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desk-large {
+    //1800px+
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    //901px - 1200px
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    //601px - 900px
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    //0 - 600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin grid--1-col() {
+  grid-template-columns: 1fr;
+  row-gap: var.$row-gap-small;
+}

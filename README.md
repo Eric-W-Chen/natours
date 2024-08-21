@@ -22,7 +22,7 @@ Modern Design: Clean, minimalistic design with a focus on typography and visual 
 
 ## Live Demo
 
-Check out the live demo of the Natours landing page [here](https://your-live-demo-link.com).
+Check out the live demo of the Natours landing page [here](https://eric-natours.netlify.app/).
 
 ## Installation
 
@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 1.  **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/natours.git
+    git clone https://github.com/eric-w-chen/natours.git
 
     ```
 
@@ -80,6 +80,7 @@ Refresh the browser to see your updates.
 - **Sass/Scss**: CSS preprocessor for writing modular and maintainable stylesheets.
 - **Git**: Version control to manage changes during development.
 - **Netlify**: Platform used for deployment and hosting of the live site.
+
   Project Structure
 
 ```plaintext

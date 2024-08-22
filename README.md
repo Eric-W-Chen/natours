@@ -77,7 +77,7 @@ Refresh the browser to see your updates.
 - **JavaScript (ES6+)**: Interactivity and dynamic content handling.
 - **HTML5**: Semantic structure for the web page.
 - **CSS3**: Advanced styling, including CSS Grid, Flexbox, animations, and transitions.
-- **Sass/Scss**: CSS preprocessor for writing modular and maintainable stylesheets.
+- **SASS/SCSS**: CSS preprocessor for writing modular and maintainable stylesheets.
 - **Git**: Version control to manage changes during development.
 - **Netlify**: Platform used for deployment and hosting of the live site.
 
